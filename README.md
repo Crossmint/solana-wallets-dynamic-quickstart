@@ -12,7 +12,7 @@
 
 <br>
 <br>
-<img src="https://github.com/user-attachments/assets/3f7f900c-e9b7-40ea-a15d-fbcbcd761117" alt="Image" width="full">
+<img src="https://github.com/user-attachments/assets/95858bef-d946-4fb5-a08e-5603c66cc0b4" alt="Image" width="full">
 </div>
 
 ## Introduction
