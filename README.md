@@ -1,7 +1,7 @@
 
 
 <div align="center">
-<img width="200" alt="Image" src="[https://github.com/user-attachments/assets/8b617791-cd37-4a5a-8695-a7c9018b7c70](https://github.com/user-attachments/assets/f96a4bfd-0254-48b3-940a-c02e29387830)" />
+<img width="200" alt="Image" src="https://github.com/user-attachments/assets/07bffa6a-2ef9-466d-8065-cb4674d4e1c9" />
 <br>
 <br>
 <h1>Solana Wallets Quickstart (Dynamic)</h1>
