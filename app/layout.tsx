@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "todo: update",
-  description: "todo: update",
+  title: "Dynamic Crossmint Solana Quickstart",
+  description: "Dynamic Crossmint Solana Quickstart",
 };
 
 export default function RootLayout({

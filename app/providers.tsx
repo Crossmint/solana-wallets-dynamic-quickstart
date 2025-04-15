@@ -2,27 +2,31 @@
 
 import {
   CrossmintProvider,
-  CrossmintAuthProvider,
+  CrossmintWalletProvider,
 } from "@crossmint/client-sdk-react-ui";
+import { DynamicContextProvider } from "@dynamic-labs/sdk-react-core";
+import { SolanaWalletConnectors } from "@dynamic-labs/solana";
 
-if (!process.env.NEXT_PUBLIC_CROSSMINT_API_KEY) {
-  throw new Error("NEXT_PUBLIC_CROSSMINT_API_KEY is not set");
+const dynamicEnvId = process.env.NEXT_PUBLIC_DYNAMIC_ENV_ID ?? "";
+const crossmintApiKey = process.env.NEXT_PUBLIC_CROSSMINT_API_KEY ?? "";
+
+if (!dynamicEnvId || !crossmintApiKey) {
+  throw new Error(
+    "NEXT_PUBLIC_DYNAMIC_ENV_ID or NEXT_PUBLIC_CROSSMINT_API_KEY is not set"
+  );
 }
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <CrossmintProvider apiKey={process.env.NEXT_PUBLIC_CROSSMINT_API_KEY || ""}>
-      <CrossmintAuthProvider
-        authModalTitle={"todo: update"}
-        embeddedWallets={{
-          createOnLogin: "all-users",
-          type: "solana-smart-wallet",
-          showPasskeyHelpers: true,
-        }}
-        loginMethods={["web3:solana-only"]}
-      >
-        {children}
-      </CrossmintAuthProvider>
-    </CrossmintProvider>
+    <DynamicContextProvider
+      settings={{
+        environmentId: dynamicEnvId,
+        walletConnectors: [SolanaWalletConnectors],
+      }}
+    >
+      <CrossmintProvider apiKey={crossmintApiKey}>
+        <CrossmintWalletProvider>{children}</CrossmintWalletProvider>
+      </CrossmintProvider>
+    </DynamicContextProvider>
   );
 }
