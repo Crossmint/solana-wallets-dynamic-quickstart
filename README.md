@@ -4,7 +4,7 @@
 <img width="200" alt="Image" src="https://github.com/user-attachments/assets/8b617791-cd37-4a5a-8695-a7c9018b7c70" />
 <br>
 <br>
-<h1>Solana Wallets Quickstart (Dynamic)</h1>
+<h1>Solana wallets with Dynamic Quickstart</h1>
 
 <div align="center">
 <a href="https://solana-wallets-dynamic.demos-crossmint.com/">Live Demo</a> | <a href="https://docs.crossmint.com/introduction/platform/wallets">Docs</a> | <a href="https://github.com/crossmint">See all quickstarts</a>
